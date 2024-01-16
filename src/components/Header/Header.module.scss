@@ -1,3 +1,30 @@
 .contentWrapper {
-  margin: auto;
+  margin: 0 auto;
+  padding-block: 20px;
+  width: fit-content;
+}
+
+.progressBar {
+  position: relative;
+  height: 3px;
+  background-color: gainsboro;
+}
+
+.progressBarIndicator {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: limegreen;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    top: -100%;
+    right: -9px;
+    background-color: limegreen;
+  }
 }

@@ -1,14 +1,23 @@
 import styles from './Header.module.scss';
 
-export const Header = () => {
+type Props = {
+  step: number;
+};
+
+export const Header: React.FC<Props> = ({ step }) => {
+  const dynamicWidth = (step * 20) + '%';
+
   return (
     <header>
       <div className={styles.contentWrapper}>
         <img alt="logo" />
-        <h3>Food Mentor</h3>
+        <span>Food Mentor</span>
       </div>
-      <div>
-        <div></div>
+      <div className={styles.progressBar}>
+        <div
+          className={styles.progressBarIndicator}
+          style={{ width: dynamicWidth }}
+        ></div>
       </div>
     </header>
   );

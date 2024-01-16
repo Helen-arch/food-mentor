@@ -1,1 +1,9 @@
-export const Activity = () => {};
+type Props = {
+  next: () => void;
+};
+
+export const ActivityStep: React.FC<Props> = ({ next }) => {
+  return (
+    <button onClick={next}>Next</button>
+  );
+};
