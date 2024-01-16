@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header } from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <input style={{ pointerEvents: 'none' }} type='range' min={0} max={10} value={5}/>
     </div>
   );
 }
 
 export default App;
+
+
+// const GOAL = 0;
+// const BODY_TYPE = 1;
+// const WORKOUT = 2;
+// const EMAIL = 5;
+
+// const Step = {
+//   GOAL,
+//   BODY_TYPE,
+//   WORKOUT,
+// };
+
+// const GoalStep = ({ prop1, next }) => {
+//   useEffect(() => {
+//     if (!prop1) {
+//       next();
+//     }
+//   }, [prop1]);
+
+
+//   return ...
+// };
+
+// const StepComponents = {
+//   [Step.GOAL]: GoalStep,
+//   [Step.BODY_TYPE]: BodyTypeStep,
+//   [Step.WORKOUT]: WorkoutStep,
+// };
+
+// const App = () => {
+//   const [step, setStep] = useState(Step.GOAL);
+
+//   const next = () => {
+//     setStep(prevStep => prevStep + 1);
+//   };
+
+//   const StepComponent = StepComponents[step];
+
+//   return <StepComponent next={next} />
+// };

@@ -1,0 +1,13 @@
+.progress::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 15%;
+  top: 0;
+  right: 0;
+  background-color: brown;
+}
+
+.progress {
+  position: relative;
+}
