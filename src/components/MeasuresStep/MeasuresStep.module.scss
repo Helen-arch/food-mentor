@@ -1,0 +1,91 @@
+.measuresSection {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.titles {
+  padding-block: 15px;
+}
+
+.mainTitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #616161;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.imperial {
+  display:inline-block;
+  width: 50%;
+  text-align: center;
+  font-weight: 800;
+  font-size: 12px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 1px solid #5fcb39;
+  border-right: none;
+  padding-block: 8px;
+  color: #5fcb39;
+  box-sizing: border-box;
+  letter-spacing: 2.5px;
+}
+
+.metric {
+  display:inline-block;
+  width: 50%;
+  text-align: center;
+  font-weight: 800;
+  font-size: 12px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid #5fcb39;
+  border-left: none;
+  padding-block: 8px;
+  color: #5fcb39;
+  box-sizing: border-box;
+  letter-spacing: 2.5px;
+}
+
+.activeTab {
+  background-color: rgba(95, 203, 57, 0.2)
+}
+
+.measureInput {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 10px;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 20px 0 20px 15px;
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+}
+
+.submitButton {
+  width: 100%;
+  background-color: #5fcb39;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  border-radius: 12px;
+  padding-block: 15px;
+  border: none;
+  margin-top: 160px;
+
+  &:disabled {
+    background-color: rgba(95, 203, 57, 0.4);
+  }
+}

@@ -1,9 +1,11 @@
+import { Quiz } from "../../types/Quiz";
+
 type Props = {
-  handleStep: () => void;
+  handleStep: (key: Quiz, value: any) => void;
 };
 
 export const ActivityStep: React.FC<Props> = ({ handleStep }) => {
   return (
-    <button onClick={handleStep}>Activity</button>
+    <button onClick={() => handleStep}>Activity</button>
   );
 };

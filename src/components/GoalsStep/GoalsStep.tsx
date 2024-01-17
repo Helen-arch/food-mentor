@@ -4,9 +4,10 @@ import female2 from '../../static/images/female2.png';
 import female3 from '../../static/images/female3.png';
 import female4 from '../../static/images/female4.png';
 import { Card } from '../Card';
+import { Quiz } from '../../types/Quiz';
 
 type Props = {
-  handleStep: () => void;
+  handleStep: (key: Quiz, value: any) => void;
 };
 
 const goals = [
@@ -26,8 +27,9 @@ export const GoalsStep: React.FC<Props> = ({ handleStep }) => {
           <h3 className={styles.subtitle}>Balanced nutrition will let you achieve them</h3>
         </div>
 
-        <h2 className={styles.goalsTitle}>What are your goals?</h2>
+        
         <div className={styles.cardsContainer}>
+          <h2 className={styles.goalsTitle}>What are your goals?</h2>
           {goals.map(({ title, src, value}) => {
             return (
               <Card

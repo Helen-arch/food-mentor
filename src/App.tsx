@@ -6,16 +6,8 @@ import { GoalsStep } from './components/GoalsStep';
 import { MeasuresStep } from './components/MeasuresStep';
 import { BehaviorsStep } from './components/BehaviorsStep';
 import { ActivityStep } from './components/ActivityStep';
-
-const quizData = {
-  goals: [],
-  measures: {
-    height: '',
-    weight: '',
-  },
-  behaviors: [],
-  activity: '',
-};
+import { quizData } from './utils/quizData';
+import { Quiz } from './types/Quiz';
 
 const StepComponents = {
   [Step.Goals]: GoalsStep,
@@ -27,12 +19,14 @@ const StepComponents = {
 function App() {
   const [step, setStep] = useState(Step.Goals);
 
-  const handleStep = (key, newValue) => {
+  const handleStep = (key: Quiz, newValue: any ) => {
     quizData[key] = newValue;
 
     if (step !== Step.Activity) {
       setStep(prevStep => prevStep + 1);
     }
+
+    console.log(quizData);
   };
 
   const prev = () => {
