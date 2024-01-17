@@ -19,30 +19,28 @@ const goals = [
 
 export const GoalsStep: React.FC<Props> = ({ handleStep }) => {
   return (
-    <main>
-      <section className={styles.goalsSection}>
-        <div className={styles.titles}>
-          <h1 className={styles.mainTitle}>The Goal</h1>
-          <h3 className={styles.subtitle}>Focus on the health benefits you need.</h3>
-          <h3 className={styles.subtitle}>Balanced nutrition will let you achieve them</h3>
-        </div>
+    <main className={styles.goals}>
+      <div className={styles.titles}>
+        <h1 className={styles.mainTitle}>The Goal</h1>
+        <h3 className={styles.subtitle}>Focus on the health benefits you need.</h3>
+        <h3 className={styles.subtitle}>Balanced nutrition will let you achieve them</h3>
+      </div>
 
-        
-        <div className={styles.cardsContainer}>
-          <h2 className={styles.goalsTitle}>What are your goals?</h2>
-          {goals.map(({ title, src, value}) => {
-            return (
-              <Card
-                key={src}
-                title={title}
-                src={src}
-                value={value}
-                handleStep={handleStep}
-              />
-            );
-          })}
-        </div>
-      </section>
+      
+      <div className={styles.cardsContainer}>
+        <h2 className={styles.goalsTitle}>What are your goals?</h2>
+        {goals.map(({ title, src, value}) => {
+          return (
+            <Card
+              key={src}
+              title={title}
+              src={src}
+              value={value}
+              handleStep={handleStep}
+            />
+          );
+        })}
+      </div>
     </main>
   );
 };

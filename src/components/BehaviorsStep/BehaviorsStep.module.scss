@@ -1,0 +1,49 @@
+.behaviors {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.titles {
+  padding-block: 15px;
+}
+
+.mainTitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #616161;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.behaviorsContainer {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.submitButton {
+  width: 100%;
+  background-color: #5fcb39;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  border-radius: 12px;
+  padding-block: 15px;
+  border: none;
+  margin-top: 160px;
+
+  &:disabled {
+    background-color: rgba(95, 203, 57, 0.4);
+  }
+}
