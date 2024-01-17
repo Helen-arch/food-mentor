@@ -7,6 +7,16 @@ import { MeasuresStep } from './components/MeasuresStep';
 import { BehaviorsStep } from './components/BehaviorsStep';
 import { ActivityStep } from './components/ActivityStep';
 
+const quizData = {
+  goals: [],
+  measures: {
+    height: '',
+    weight: '',
+  },
+  behaviors: [],
+  activity: '',
+};
+
 const StepComponents = {
   [Step.Goals]: GoalsStep,
   [Step.Measures]: MeasuresStep,
@@ -17,7 +27,9 @@ const StepComponents = {
 function App() {
   const [step, setStep] = useState(Step.Goals);
 
-  const next = () => {
+  const handleStep = (key, newValue) => {
+    quizData[key] = newValue;
+
     if (step !== Step.Activity) {
       setStep(prevStep => prevStep + 1);
     }
@@ -34,7 +46,7 @@ function App() {
   return (
     <div className={styles.app}>
       <Header prev={prev} />
-      <StepComponent next={next} />
+      <StepComponent handleStep={handleStep} />
     </div>
   );
 }

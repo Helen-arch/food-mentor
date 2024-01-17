@@ -1,9 +1,9 @@
 type Props = {
-  next: () => void;
+  handleStep: () => void;
 };
 
-export const MeasuresStep: React.FC<Props> = ({ next }) => {
+export const MeasuresStep: React.FC<Props> = ({ handleStep }) => {
   return (
-    <button onClick={next}>Measures</button>
+    <button onClick={handleStep}>Measures</button>
   );
 };
