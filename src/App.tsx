@@ -1,32 +1,39 @@
 import { useState } from 'react';
+import styles from './App.module.scss';
 import { Header } from './components/Header';
 import { Step } from './types/Step';
-import { GoalStep } from './components/GoalStep';
-import { GenderStep } from './components/GenderStep';
-import { CurrentBodyStep } from './components/CurrentBodyStep';
+import { GoalsStep } from './components/GoalsStep';
+import { MeasuresStep } from './components/MeasuresStep';
+import { BehaviorsStep } from './components/BehaviorsStep';
 import { ActivityStep } from './components/ActivityStep';
-import { EmailStep } from './components/EmailStep';
 
 const StepComponents = {
-  [Step.Gender]: GenderStep,
-  [Step.Goal]: GoalStep,
-  [Step.CurrentBody]: CurrentBodyStep,
+  [Step.Goals]: GoalsStep,
+  [Step.Measures]: MeasuresStep,
+  [Step.Behaviors]: BehaviorsStep,
   [Step.Activity]: ActivityStep,
-  [Step.Email]: EmailStep,
 };
 
 function App() {
-  const [step, setStep] = useState(Step.Gender);
+  const [step, setStep] = useState(Step.Goals);
 
   const next = () => {
-    setStep(prevStep => prevStep + 1);
+    if (step !== Step.Activity) {
+      setStep(prevStep => prevStep + 1);
+    }
+  };
+
+  const prev = () => {
+    if (step !== Step.Goals) {
+      setStep(prevStep => prevStep - 1);
+    }
   };
 
   const StepComponent = StepComponents[step];
 
   return (
-    <div>
-      <Header step={step} />
+    <div className={styles.app}>
+      <Header prev={prev} />
       <StepComponent next={next} />
     </div>
   );

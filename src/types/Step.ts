@@ -1,7 +1,6 @@
 export enum Step {
-  Gender = 1,
-  Goal = 2,
-  CurrentBody = 3,
+  Goals = 1,
+  Measures = 2,
+  Behaviors = 3,
   Activity = 4,
-  Email = 5,
 };

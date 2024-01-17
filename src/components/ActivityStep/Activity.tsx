@@ -4,6 +4,6 @@ type Props = {
 
 export const ActivityStep: React.FC<Props> = ({ next }) => {
   return (
-    <button onClick={next}>Next</button>
+    <button onClick={next}>Activity</button>
   );
 };
