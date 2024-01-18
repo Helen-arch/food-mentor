@@ -6,10 +6,11 @@ type Props = {
   leftImgStyles?: string;
   rightImgStyles?: string;
   singleSelectedCard?: string;
+  activityCard?: string;
   isSelected: boolean;
   titleStyles: string;
   title: string;
-  src: string;
+  src?: string;
 };
 
 export const Card: React.FC<Props> = ({
@@ -17,12 +18,15 @@ export const Card: React.FC<Props> = ({
   leftImgStyles,
   rightImgStyles,
   singleSelectedCard,
+  activityCard,
   isSelected,
   titleStyles,
   title,
   src,
 }) => {
-  const cardStyles = classNames(styles.card, singleSelectedCard, { [styles.selectedCard]: isSelected });
+  const cardStyles = classNames(styles.card, activityCard, singleSelectedCard, {
+    [styles.selectedCard]: isSelected,
+  });
   const titleClassName = classNames(styles.cardTitle, titleStyles);
 
   return (
