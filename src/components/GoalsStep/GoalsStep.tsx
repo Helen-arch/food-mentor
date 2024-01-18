@@ -37,6 +37,9 @@ export const GoalsStep: React.FC<Props> = ({ handleStep }) => {
               src={src}
               value={value}
               handleStep={handleStep}
+              leftImgStyles={styles.leftImg}
+              singleSelectedCard={styles.singleSelectedCardStyles}
+              titleStyles={styles.cardTitle}
             />
           );
         })}

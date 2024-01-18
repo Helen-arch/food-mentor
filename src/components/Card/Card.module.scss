@@ -1,9 +1,7 @@
 .goalCard {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   min-width: 172px;
-  background: linear-gradient(to left bottom, #f1f1f1, #ffffff);
   border-radius: 20px;
   border: 1px solid #e1e1e1;
   box-sizing: border-box;
@@ -16,9 +14,6 @@
 }
 
 .cardTitle {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;
   padding-left: 10px;
   white-space: pre-line;
 }

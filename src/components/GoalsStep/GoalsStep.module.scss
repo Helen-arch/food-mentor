@@ -38,3 +38,18 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
+.leftImg {
+  display: none;
+}
+
+.singleSelectedCardStyles {
+  justify-content: space-between;
+  background: linear-gradient(to left bottom, #f1f1f1, #ffffff);
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}

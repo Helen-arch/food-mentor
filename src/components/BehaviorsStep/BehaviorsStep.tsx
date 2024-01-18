@@ -15,12 +15,12 @@ type Props = {
 };
 
 const behaviorsData = [
-  { title: `I don't rest enough`, value: 'rest' , src: moon },
-  { title: 'I have a sweet tooth', value: 'sweets' , src: donut },
-  { title: 'I have too much soda', value: 'soda' , src: soda },
-  { title: 'I eat many salty foods', value: 'salt' , src: salt },
-  { title: 'I enjoy midnight snacks', value: 'snacks' , src: pizza },
-  { title: 'None of the above', value: 'none' , src: cross },
+  { title: `I don't rest\nenough`, value: 'rest' , src: moon },
+  { title: 'I have a sweet\ntooth', value: 'sweets' , src: donut },
+  { title: 'I have too\nmuch soda', value: 'soda' , src: soda },
+  { title: 'I eat many\nsalty foods', value: 'salt' , src: salt },
+  { title: 'I enjoy\nmidnight\nsnacks', value: 'snacks' , src: pizza },
+  { title: 'None of the\nabove', value: 'none' , src: cross },
 ];
 
 export const BehaviorsStep: React.FC<Props> = ({ handleStep }) => {
@@ -59,6 +59,9 @@ export const BehaviorsStep: React.FC<Props> = ({ handleStep }) => {
                 value={value}
                 src={src}
                 handleSelect={handleSelect}
+                rightImgStyles={styles.rightImg}
+                leftImgStyles={styles.leftImg}
+                titleStyles={styles.titleCard}
               />
             );
           })}
