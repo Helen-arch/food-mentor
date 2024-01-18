@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './BehaviorsStep.module.scss';
+import { Card } from '../Card';
 import { Quiz } from "../../types/Quiz";
 import { Behaviors } from '../../types/Behaviors';
 import moon from '../../static/icons/moon.svg';
@@ -8,7 +9,8 @@ import soda from '../../static/icons/soda.svg';
 import salt from '../../static/icons/salt.svg';
 import pizza from '../../static/icons/pizza.svg';
 import cross from '../../static/icons/cross.svg';
-import { Card } from '../Card';
+import classNames from 'classnames';
+import { quizData } from '../../utils/quizData';
 
 type Props = {
   handleStep: (key: Quiz, value: any) => void;
@@ -24,7 +26,7 @@ const behaviorsData = [
 ];
 
 export const BehaviorsStep: React.FC<Props> = ({ handleStep }) => {
-  const [behaviors, setBehaviors] = useState<Behaviors[]>([]);
+  const [behaviors, setBehaviors] = useState<Behaviors[]>(quizData.behaviors);
 
   const handleSelect = (value: Behaviors) => {
     if (behaviors.includes(value)) {
@@ -52,16 +54,18 @@ export const BehaviorsStep: React.FC<Props> = ({ handleStep }) => {
       >
         <div className={styles.behaviorsContainer}>
           {behaviorsData.map(({ title, value, src }) => {
+            const multiSelect = behaviors.includes(value as Behaviors);
+
             return (
               <Card
                 key={src}
                 title={title}
-                value={value}
                 src={src}
-                handleSelect={handleSelect}
+                onClick={() => handleSelect(value as Behaviors)}
                 rightImgStyles={styles.rightImg}
                 leftImgStyles={styles.leftImg}
                 titleStyles={styles.titleCard}
+                isSelected={multiSelect}
               />
             );
           })}

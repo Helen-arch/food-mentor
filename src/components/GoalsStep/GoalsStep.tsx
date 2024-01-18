@@ -5,6 +5,8 @@ import female3 from '../../static/images/female3.png';
 import female4 from '../../static/images/female4.png';
 import { Card } from '../Card';
 import { Quiz } from '../../types/Quiz';
+import { quizData } from '../../utils/quizData';
+import { useState } from 'react';
 
 type Props = {
   handleStep: (key: Quiz, value: any) => void;
@@ -13,11 +15,13 @@ type Props = {
 const goals = [
   { title: 'Lose\nWeight', value: 'lose weight', src: female1 },
   { title: 'Gain\nMuscle', value: 'gain muscle', src: female2 },
-  { title: 'Develop\nhealthy\nhabits', value: 'develop healthy habits', src: female3 },
-  { title: 'Develop\nhealthy\nhabits', value: 'develop healthy habits', src: female4 },
+  { title: 'Develop\nhealthy\nhabits', value: 'develop healthy habits1', src: female3 },
+  { title: 'Develop\nhealthy\nhabits', value: 'develop healthy habits2', src: female4 },
 ];
 
 export const GoalsStep: React.FC<Props> = ({ handleStep }) => {
+  const [goal, setGoal] = useState(quizData.goal);
+
   return (
     <main className={styles.goals}>
       <div className={styles.titles}>
@@ -30,16 +34,21 @@ export const GoalsStep: React.FC<Props> = ({ handleStep }) => {
       <div className={styles.cardsContainer}>
         <h2 className={styles.goalsTitle}>What are your goals?</h2>
         {goals.map(({ title, src, value}) => {
+          const selected = goal === value;
+
           return (
             <Card
               key={src}
               title={title}
               src={src}
-              value={value}
-              handleStep={handleStep}
+              onClick={() => {
+                setGoal(value);
+                handleStep(Quiz.Goals, value);
+              }}
               leftImgStyles={styles.leftImg}
               singleSelectedCard={styles.singleSelectedCardStyles}
               titleStyles={styles.cardTitle}
+              isSelected={selected}
             />
           );
         })}

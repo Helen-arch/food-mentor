@@ -3,15 +3,16 @@ import classNames from 'classnames';
 import styles from './MeasuresStep.module.scss';
 import { Quiz } from "../../types/Quiz";
 import { System } from '../../types/System';
+import { quizData } from '../../utils/quizData';
 
 type Props = {
   handleStep: (key: Quiz, value: any) => void;
 };
 
 export const MeasuresStep: React.FC<Props> = ({ handleStep }) => {
-  const [height, setHeight] = useState('');
-  const [weight, setWeight] = useState('');
-  const [system, setSystem] = useState(System.Imperial);
+  const [height, setHeight] = useState(quizData.measures.height);
+  const [weight, setWeight] = useState(quizData.measures.weight);
+  const [system, setSystem] = useState(quizData.measures.system);
 
   const heightUnits = system === System.Imperial ? 'ft' : 'm';
   const weightUnits = system === System.Imperial ? 'ft' : 'kg';

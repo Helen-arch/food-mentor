@@ -1,5 +1,5 @@
 export enum Quiz {
-  Goals = 'goals',
+  Goals = 'goal',
   Measures = 'measures',
   Behaviors = 'behaviors',
   Activity = 'activity',

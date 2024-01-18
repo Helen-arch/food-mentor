@@ -1,45 +1,35 @@
 import classNames from 'classnames';
-import { Behaviors } from '../../types/Behaviors';
-import { Quiz } from '../../types/Quiz';
 import styles from './Card.module.scss';
 
 type Props = {
-  handleStep?: (key: Quiz, value: any) => void;
-  handleSelect?: (value: Behaviors) => void;
+  onClick: () => void;
   leftImgStyles?: string;
   rightImgStyles?: string;
   singleSelectedCard?: string;
+  isSelected: boolean;
   titleStyles: string;
   title: string;
   src: string;
-  value: string;
 };
 
 export const Card: React.FC<Props> = ({
-  handleStep,
-  handleSelect,
+  onClick,
   leftImgStyles,
   rightImgStyles,
   singleSelectedCard,
+  isSelected,
   titleStyles,
   title,
   src,
-  value,
 }) => {
-  const cardStyles = classNames(styles.goalCard, singleSelectedCard);
+  const cardStyles = classNames(styles.card, singleSelectedCard, { [styles.selectedCard]: isSelected });
   const titleClassName = classNames(styles.cardTitle, titleStyles);
 
   return (
     <article
       role='button'
       className={cardStyles}
-      onClick={() => {
-        if (handleStep) {
-          handleStep(Quiz.Goals, value);
-        } else if (handleSelect) {
-          handleSelect(value as Behaviors);
-        }
-      }}
+      onClick={onClick}
     >
       <img src={src} alt="icon" className={leftImgStyles} />
       <div className={titleClassName}>{title}</div>
