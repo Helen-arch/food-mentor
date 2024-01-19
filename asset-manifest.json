@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food-mentor/static/css/main.f1468519.css",
-    "main.js": "/food-mentor/static/js/main.4031b7f2.js",
+    "main.css": "/food-mentor/static/css/main.c4b84073.css",
+    "main.js": "/food-mentor/static/js/main.f3881fe7.js",
     "static/js/787.6bd111aa.chunk.js": "/food-mentor/static/js/787.6bd111aa.chunk.js",
     "static/media/active_girl.png": "/food-mentor/static/media/active_girl.d8acf9b382eec3c760a2.png",
     "static/media/donut.svg": "/food-mentor/static/media/donut.59820891ef1cf83e3ec2c57987795ce6.svg",
@@ -13,12 +13,12 @@
     "static/media/moon.svg": "/food-mentor/static/media/moon.70e740762e99f19fdf0da1f3e8dee1bd.svg",
     "index.html": "/food-mentor/index.html",
     "static/media/back.svg": "/food-mentor/static/media/back.e3599f23afc635822e3c2a660c4813f2.svg",
-    "main.f1468519.css.map": "/food-mentor/static/css/main.f1468519.css.map",
-    "main.4031b7f2.js.map": "/food-mentor/static/js/main.4031b7f2.js.map",
+    "main.c4b84073.css.map": "/food-mentor/static/css/main.c4b84073.css.map",
+    "main.f3881fe7.js.map": "/food-mentor/static/js/main.f3881fe7.js.map",
     "787.6bd111aa.chunk.js.map": "/food-mentor/static/js/787.6bd111aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1468519.css",
-    "static/js/main.4031b7f2.js"
+    "static/css/main.c4b84073.css",
+    "static/js/main.f3881fe7.js"
   ]
 }
