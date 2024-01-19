@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import classNames from 'classnames';
 import styles from './MeasuresStep.module.scss';
-import { Quiz } from "../../types/Quiz";
+import { Quiz } from '../../types/Quiz';
 import { System } from '../../types/System';
 import { quizData } from '../../utils/quizData';
 

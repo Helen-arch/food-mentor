@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './BehaviorsStep.module.scss';
 import { Card } from '../Card';
-import { Quiz } from "../../types/Quiz";
+import { Quiz } from '../../types/Quiz';
 import { Behaviors } from '../../types/Behaviors';
 import moon from '../../static/icons/moon.svg';
 import donut from '../../static/icons/donut.svg';
@@ -9,7 +9,6 @@ import soda from '../../static/icons/soda.svg';
 import salt from '../../static/icons/salt.svg';
 import pizza from '../../static/icons/pizza.svg';
 import cross from '../../static/icons/cross.svg';
-import classNames from 'classnames';
 import { quizData } from '../../utils/quizData';
 
 type Props = {

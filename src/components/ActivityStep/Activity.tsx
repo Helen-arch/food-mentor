@@ -1,5 +1,5 @@
 import styles from './Activity.module.scss';
-import { Quiz } from "../../types/Quiz";
+import { Quiz } from '../../types/Quiz';
 import { useState } from 'react';
 import { quizData } from '../../utils/quizData';
 import { Card } from '../Card';

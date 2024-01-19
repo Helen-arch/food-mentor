@@ -38,6 +38,7 @@
   color: #5fcb39;
   box-sizing: border-box;
   letter-spacing: 2.5px;
+  cursor: pointer;
 }
 
 .metric {
@@ -54,6 +55,7 @@
   color: #5fcb39;
   box-sizing: border-box;
   letter-spacing: 2.5px;
+  cursor: pointer;
 }
 
 .activeTab {
@@ -84,6 +86,7 @@
   padding-block: 15px;
   border: none;
   margin-top: 160px;
+  cursor: pointer;
 
   &:disabled {
     background-color: rgba(95, 203, 57, 0.4);

@@ -1,5 +1,5 @@
-import { Quiz } from "../types/Quiz";
-import { System } from "../types/System";
+import { Quiz } from '../types/Quiz';
+import { System } from '../types/System';
 
 export const quizData = {
   [Quiz.Goals]: '',
